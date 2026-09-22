@@ -5,7 +5,7 @@
 </p>
 
 <h1 align="center" style="font-size: 38px;">赛博监工</h1>
-<h3 align="center">AE2 Control for GTNH 2.8.0</h3>
+<h3 align="center">AE2 Control for GTNH 2.9.0-beta-3</h3>
 
 
 ## 简介
@@ -14,6 +14,20 @@
 
 
 该项目基于[RemoteOC](https://github.com/z5882852/RemoteOC)框架开发，需要一台**可公网访问的主机**作为服务器，以及一台或多台OpenComputers电脑作为客户端。
+
+## GTNH 2.9 兼容性
+
+此分支面向 **GTNH 2.9.0-beta-3**，对应以下关键模组版本：
+
+- Applied Energistics 2: `rv3-beta-1050-GTNH`
+- AE2 Fluid Crafting: `1.5.106-gtnh`
+- OpenComputers: `1.12.61-GTNH`
+
+2.9 的 OpenComputers/AE2 接口将合成结果从 `getItemStack()` 改为 `getStack()`，并将流体作为原生 AE2 存储与合成类型。本分支会统一列出物品和原生流体，并支持直接按 mB 下单流体。
+
+> 仓库中随附的 2.8 物品/流体数据库只用于中文名和图标。2.9 新增条目会自动使用游戏实时返回的名称和默认图标，不影响查询或下单。
+
+完整的版本对照和 API 迁移记录见 [PORTING.md](PORTING.md)。
 
 
 ## 功能
@@ -87,7 +101,7 @@ website/   # 网页前端
 
    - 使用 Git 克隆项目到本地：
      ```bash
-     git clone https://github.com/z5882852/RemoteOC-GTNH-AE2.git
+     git clone --branch gtnh-2.9.0-beta-3 https://github.com/Jesse-njx/RemoteOC-GTNH-AE2.git
      ```
    - 进入项目目录：
      ```bash
@@ -123,7 +137,7 @@ website/   # 网页前端
 2. **克隆源码**
    - 使用 Git 克隆项目到本地：
      ```bash
-     git clone https://github.com/z5882852/RemoteOC-GTNH-AE2.git
+     git clone --branch gtnh-2.9.0-beta-3 https://github.com/Jesse-njx/RemoteOC-GTNH-AE2.git
      ```
    - 进入项目目录：
      ```bash
@@ -182,7 +196,7 @@ website/   # 网页前端
 
     - 下载安装程序
     ```bash
-    wget https://raw.githubusercontent.com/z5882852/RemoteOC-GTNH-AE2/main/client/setup.lua
+    wget https://raw.githubusercontent.com/Jesse-njx/RemoteOC-GTNH-AE2/gtnh-2.9.0-beta-3/client/setup.lua
     ```
 
     - 安装客户端
@@ -229,7 +243,7 @@ website/   # 网页前端
 如果您希望快速部署前端，可直接使用打包好的文件，无需进行源码构建。
 
 1. **下载 Releases 文件**
-   - 访问项目的 Releases 页面：[🔗 **GitHub Releases**](https://github.com/z5882852/RemoteOC-GTNH-AE2/releases)
+   - 访问项目的分支页面：[🔗 **GTNH 2.9.0-beta-3 branch**](https://github.com/Jesse-njx/RemoteOC-GTNH-AE2/tree/gtnh-2.9.0-beta-3)
    - 下载最新版本的 `RemoteOC_frontend-x.x.x_GTNH-2.x.0.tar.gz` 文件（或类似文件名的构建包）。
 
 2. **上传到服务器**
@@ -252,7 +266,7 @@ website/   # 网页前端
 2. **克隆源码**
    - 使用 Git 克隆项目到本地：
      ```bash
-     git clone https://github.com/z5882852/RemoteOC-GTNH-AE2.git
+     git clone --branch gtnh-2.9.0-beta-3 https://github.com/Jesse-njx/RemoteOC-GTNH-AE2.git
      ```
    - 进入项目目录：
      ```bash
@@ -358,5 +372,3 @@ website/   # 网页前端
 ### 物品和流体图标、数据导出
 
 [https://github.com/RealSilverMoon/nesql-exporter/](https://github.com/RealSilverMoon/nesql-exporter/)
-
-

@@ -37,10 +37,10 @@ app.provide('isMobile', isMobile);
 
 // 全局变量-仓库地址
 app.config.globalProperties.$defaultLinkPrefix = "https://github.com";
-app.config.globalProperties.$userName = "z5882852";
+app.config.globalProperties.$userName = "Jesse-njx";
 app.config.globalProperties.$repoName = "RemoteOC-GTNH-AE2";
 // GTNH版本
-app.config.globalProperties.$gameVersion = "2.8.0";
+app.config.globalProperties.$gameVersion = "2.9.0-beta-3";
 
 app.mount('#app')
 

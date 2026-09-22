@@ -5,7 +5,7 @@ local args = {...}
 if #args >= 1 then
     repo = args[1]
 else
-    repo = "https://raw.githubusercontent.com/z5882852/RemoteOC-GTNH-AE2/main/client/"
+    repo = "https://raw.githubusercontent.com/Jesse-njx/RemoteOC-GTNH-AE2/gtnh-2.9.0-beta-3/client/"
 end
 
 local scripts = {
