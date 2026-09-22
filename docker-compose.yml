@@ -17,7 +17,8 @@ services:
       context: ./server
     container_name: roc-gtnh-backend
     env_file:
-      - ./server/.env
+      - path: ./server/.env
+        required: false
     ports:
       # 端口映射到宿主机，如果需要修改宿主机端口，请修改左侧端口
       - "8080:8080"

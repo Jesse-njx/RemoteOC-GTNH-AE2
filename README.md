@@ -29,6 +29,8 @@
 
 完整的版本对照和 API 迁移记录见 [PORTING.md](PORTING.md)。
 
+本仓库是 [z5882852/RemoteOC-GTNH-AE2](https://github.com/z5882852/RemoteOC-GTNH-AE2) 的公开分支。代码使用 [MIT License](LICENSE)，第三方代码、GTNH 数据与游戏图标的归属说明见 [NOTICE](NOTICE)。
+
 
 ## 功能
 
@@ -64,12 +66,13 @@ website/   # 网页前端
 1. **准备工作**
 
     - 安装`Docker`和`Docker Compose`
-    - 下载仓库中的`docker-compose.yml`和`server/.env`文件
+    - 下载仓库中的 `docker-compose.yml` 和 `server/.env.example` 文件
 
 2. **修改配置**
 
     - 根据想要修改`docker-compose.yml`文件中的环境变量
-    - 修改`.env`文件中的环境变量
+    - 执行 `cp server/.env.example server/.env`
+    - 为 `SERVER_TOKEN` 生成并填写一个唯一的长随机令牌，并在 OC 客户端使用同一令牌
 
 3. **启动服务**
 
@@ -152,7 +155,8 @@ website/   # 网页前端
 
 4. **修改配置**
 
-    - 根据需要修改`.env`文件中的环境变量
+    - 执行 `cp .env.example .env`
+    - 修改 `.env` 中的环境变量，务必替换默认的 `SERVER_TOKEN`
     - 根据需要修改`config.py`文件中的配置
 
 5. **运行服务**
