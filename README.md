@@ -29,7 +29,7 @@
 
 完整的版本对照和 API 迁移记录见 [PORTING.md](PORTING.md)。
 
-本仓库是 [z5882852/RemoteOC-GTNH-AE2](https://github.com/z5882852/RemoteOC-GTNH-AE2) 的公开分支。代码使用 [MIT License](LICENSE)，第三方代码、GTNH 数据与游戏图标的归属说明见 [NOTICE](NOTICE)。
+本项目最初由 [z5882852](https://github.com/z5882852) 发布；GTNH 2.9 移植由 [Jesse-njx](https://github.com/Jesse-njx) 贡献。代码使用 [MIT License](LICENSE)，第三方代码、GTNH 数据与游戏图标的归属说明见 [NOTICE](NOTICE)。
 
 
 ## 功能
@@ -104,7 +104,7 @@ website/   # 网页前端
 
    - 使用 Git 克隆项目到本地：
      ```bash
-     git clone --branch gtnh-2.9.0-beta-3 https://github.com/Jesse-njx/RemoteOC-GTNH-AE2.git
+     git clone https://github.com/z5882852/RemoteOC-GTNH-AE2.git
      ```
    - 进入项目目录：
      ```bash
@@ -140,7 +140,7 @@ website/   # 网页前端
 2. **克隆源码**
    - 使用 Git 克隆项目到本地：
      ```bash
-     git clone --branch gtnh-2.9.0-beta-3 https://github.com/Jesse-njx/RemoteOC-GTNH-AE2.git
+     git clone https://github.com/z5882852/RemoteOC-GTNH-AE2.git
      ```
    - 进入项目目录：
      ```bash
@@ -200,7 +200,7 @@ website/   # 网页前端
 
     - 下载安装程序
     ```bash
-    wget https://raw.githubusercontent.com/Jesse-njx/RemoteOC-GTNH-AE2/gtnh-2.9.0-beta-3/client/setup.lua
+    wget https://raw.githubusercontent.com/z5882852/RemoteOC-GTNH-AE2/main/client/setup.lua
     ```
 
     - 安装客户端
@@ -247,7 +247,7 @@ website/   # 网页前端
 如果您希望快速部署前端，可直接使用打包好的文件，无需进行源码构建。
 
 1. **下载 Releases 文件**
-   - 访问项目的分支页面：[🔗 **GTNH 2.9.0-beta-3 branch**](https://github.com/Jesse-njx/RemoteOC-GTNH-AE2/tree/gtnh-2.9.0-beta-3)
+   - 访问项目的 [Releases 页面](https://github.com/z5882852/RemoteOC-GTNH-AE2/releases)
    - 下载最新版本的 `RemoteOC_frontend-x.x.x_GTNH-2.x.0.tar.gz` 文件（或类似文件名的构建包）。
 
 2. **上传到服务器**
@@ -263,14 +263,14 @@ website/   # 网页前端
 
 #### **3. 克隆源码并构建再部署**
 1. **环境要求**
-   - Node.js: 推荐版本 16.x 或以上
+   - Node.js: 20.19.x 或 22.12.x 以上
    - npm 或 yarn: 用于安装依赖
    - Git: 用于克隆项目
 
 2. **克隆源码**
    - 使用 Git 克隆项目到本地：
      ```bash
-     git clone --branch gtnh-2.9.0-beta-3 https://github.com/Jesse-njx/RemoteOC-GTNH-AE2.git
+     git clone https://github.com/z5882852/RemoteOC-GTNH-AE2.git
      ```
    - 进入项目目录：
      ```bash

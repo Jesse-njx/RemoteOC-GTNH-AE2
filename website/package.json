@@ -3,7 +3,7 @@
   "private": true,
   "version": "2.3.0",
   "license": "MIT",
-  "repository": "github:Jesse-njx/RemoteOC-GTNH-AE2",
+  "repository": "github:z5882852/RemoteOC-GTNH-AE2",
   "scripts": {
     "dev": "vite --port 80 --host 0.0.0.0",
     "build": "vite build",
