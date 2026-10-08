@@ -161,7 +161,14 @@ function ae.getCpuDetail(cpuName)
 end
 
 local function requestStack(stackType, details, amount, cpuName)
-    local craftable = me.getCraftable(details, stackType)
+    local craftable
+    if stackType == ITEM_STACK and details.label then
+        -- Typed lookup ignores labels; fluid_drop variants share name and damage.
+        local craftables = me.getCraftables(details)
+        craftable = craftables and craftables[1]
+    else
+        craftable = me.getCraftable(details, stackType)
+    end
 
     if not craftable then
         return { message = "没有找到指定的合成配方" }
@@ -235,6 +242,10 @@ function ae.getAllSilempleItems(filter)
             os.sleep(0)
         end
     end
+    -- An item filter must not include unrelated native fluids.
+    if filter ~= nil then
+        return { message = "success", data = newOne }
+    end
     local fluids = me.getFluidsInNetwork()
     for i, fluid in pairs(fluids or {}) do
         if fluid.size ~= nil or fluid.amount ~= nil then
@@ -251,6 +262,9 @@ function ae.getAllItems(filter)
     -- 2.9 将流体提升为 AE2 原生存储类型，因此一起返回供网页统一展示。
     local items = me.getItemsInNetwork(filter)
     local data = parseStacks(items, ITEM_STACK) or {}
+    if filter ~= nil then
+        return { message = "success", data = data }
+    end
     local fluids = parseStacks(me.getFluidsInNetwork(), FLUID_STACK) or {}
     for _, fluid in pairs(fluids) do
         table.insert(data, fluid)

@@ -65,8 +65,13 @@ website/   # 网页前端
 
 1. **准备工作**
 
-    - 安装`Docker`和`Docker Compose`
-    - 下载仓库中的 `docker-compose.yml` 和 `server/.env.example` 文件
+    - 安装 `Git`、`Docker` 和 `Docker Compose`（2.24.0 或更新版本）
+    - 克隆完整仓库并进入项目根目录；Compose 会使用 `website/` 和 `server/` 中的源码及 Dockerfile 构建镜像
+
+    ```bash
+    git clone https://github.com/z5882852/RemoteOC-GTNH-AE2.git
+    cd RemoteOC-GTNH-AE2
+    ```
 
 2. **修改配置**
 
@@ -77,20 +82,20 @@ website/   # 网页前端
 3. **启动服务**
 
     ```bash
-    docker-compose up -d
+    docker compose up -d --build
     ```
     > 默认前端端口为`80`，可直接访问，后端端口为`8080`，可在`docker-compose.yml`中修改
   
 4. **查看日志**
 
     ```bash
-    docker-compose logs -f
+    docker compose logs -f
     ```
 
 5. **停止服务**
 
     ```bash
-    docker-compose down
+    docker compose down
     ```
 
 ### 手动构建后端 Docker 镜像

@@ -24,8 +24,8 @@ The upstream implementation is in OpenComputers' [`NetworkControl.scala`](https:
 
 ## Port behavior
 
-- `ae.getAllItems()` and the legacy-named `ae.getAllSilempleItems()` return both items and native fluids with a `stackType` discriminator.
-- `ae.requestItem()` performs a typed item lookup.
+- `ae.getAllItems()` and the legacy-named `ae.getAllSilempleItems()` return both items and native fluids with a `stackType` discriminator when no filter is supplied. With an item filter, they return only matching items.
+- `ae.requestItem()` performs a typed item lookup unless a label is supplied. Label-sensitive requests use `getCraftables(filter)` to distinguish NBT-backed items such as different `fluid_drop` recipes sharing the same name and damage.
 - `ae.requestFluid()` performs a typed native-fluid lookup and takes an amount in mB.
 - The web UI displays, filters, selects, and orders native fluids.
 - Automation actions persist `stack_type` and route native-fluid orders correctly.
